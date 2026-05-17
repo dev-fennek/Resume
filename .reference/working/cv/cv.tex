@@ -1,0 +1,47 @@
+%% moderncv — "classic" style
+%% Overleaf template: https://www.overleaf.com/latex/templates/moderncv-and-multilingual/qjkmpfymrzpn
+%% Package (CTAN): https://ctan.org/pkg/moderncv
+%% On Overleaf no installation is needed — moderncv ships with TeX Live.
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+\moderncvstyle{classic}        % classic | casual | banking | oldstyle | fancy
+\moderncvcolor{blue}           % blue | orange | green | red | purple | grey | black
+
+\usepackage[scale=0.75]{geometry}
+
+% ---- Personal data ----------------------------------------------------------
+\name{First}{Last}
+\title{Curriculum Vitae}
+\address{Street}{City, ZIP}{Country}
+\phone[mobile]{+00~000~000~000}
+\email{you@example.com}
+\homepage{example.com}
+\social[linkedin]{your-id}
+\social[github]{your-id}
+% \photo[64pt][0.4pt]{picture}
+
+% ---- Bibliography (pulls from the scholar BibTeX) ---------------------------
+\usepackage{multibib}
+\newcites{pub}{Publications}
+\bibliographystyle{plain}
+
+\begin{document}
+\makecvtitle
+
+\section{Education}
+\cventry{year--year}{Degree}{Institution}{City}{}{Description}
+
+\section{Experience}
+\cventry{year--year}{Job title}{Employer}{City}{}{Description of duties.}
+
+\section{Skills}
+\cvitem{Languages}{English, ...}
+\cvitem{Technical}{...}
+
+\section{Publications}
+% Add entries to ../../papers/scholar/scholar.bib then cite them here.
+\nocitepub{*}
+\bibliographypub{../../papers/scholar/scholar}
+
+\end{document}
